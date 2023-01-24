@@ -7,6 +7,7 @@
 body {
     background-color: hsl(217, 54%, 11%);
     font-family: 'Outfit';
+    color: white;
 }
 
 main {
@@ -24,22 +25,40 @@ main {
 
 .card {
     display: table-column;
-    max-width: 600px;
+    max-width: 500px;
     overflow: hidden;
     border-radius: 20px;
     margin: 15px;
     background-color: hsl(216, 50%, 16%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.imgs {
+.card-img {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
     overflow: hidden;
     margin: 30px;
-    width: 500px;
-    height: 550px;
+    max-width: 100vw;
+    max-height: 50vh;
+    cursor: pointer;
 }
+.overlay {
+    position: absolute;
+	width: 440px;
+	height: 50%;
+	border-radius: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+}
+.overlay:hover {
+    background-color: hsl(178, 100%, 50%) ;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
 .info {
     padding: 30px;
     padding-top: 0;
@@ -47,20 +66,73 @@ main {
 .title {
     color: white;
     padding-bottom: 16px;
-    font-weight: 400;
+    font-weight: 600;
+    cursor: pointer;
 }
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    transition: all 0.3s ease-in-out;
+}
+
 .description {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 300;
     padding-top: 5px;
     color: hsl(215, 51%, 70%);
     display: flex;
     align-items: center;
 }
-
-.price {
+.information {
+    padding-top: 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.price {
+    font-size: 20px;
+    display: flex;
     color: hsl(178, 100%, 50%);
+    object-fit: contain;
+    gap: 10px;
+}
+.timeremaining {
+    font-size: 20px;
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    object-fit: contain;
+    gap: 10px;
+}
+.eth {
+    
+}
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+    margin-top: 35px;
+    background-color: hsl(215, 32%, 27%);
+}
+.creation {
+    padding-top: 30px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: hsl(215, 51%, 70%);
+}
+.crtphoto {
+    width: 50px;
+    border: solid white;
+    border-radius: 70px;
+    border-width: 2px;
+    
+}
+.creator {
+    color: white;
+    cursor: pointer;
+}
+a:hover {
+    color: hsl(178, 100%, 50%);
+    transition: all 0.3s ease-in-out;
 }
